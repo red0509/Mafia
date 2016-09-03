@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1213657F1D783B4A00E6DA58 /* DistributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */; };
 		12DB5DC11D762D2F00771C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DC01D762D2F00771C34 /* AppDelegate.swift */; };
-		12DB5DC31D762D2F00771C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DC21D762D2F00771C34 /* ViewController.swift */; };
+		12DB5DC31D762D2F00771C34 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DC21D762D2F00771C34 /* MainController.swift */; };
 		12DB5DC61D762D3000771C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DB5DC41D762D3000771C34 /* Main.storyboard */; };
 		12DB5DC91D762D3000771C34 /* Mafia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DC71D762D3000771C34 /* Mafia.xcdatamodeld */; };
 		12DB5DCB1D762D3000771C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12DB5DCA1D762D3000771C34 /* Assets.xcassets */; };
 		12DB5DCE1D762D3000771C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DB5DCC1D762D3000771C34 /* LaunchScreen.storyboard */; };
+		12DB5DD61D7639F100771C34 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 12DB5DD51D7639F100771C34 /* Podfile */; };
+		12DB5DD91D76E51500771C34 /* CountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DD81D76E51500771C34 /* CountTableViewController.swift */; };
+		12DB5DDB1D76EED000771C34 /* CountTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DDA1D76EED000771C34 /* CountTableCell.swift */; };
+		F14547AA42A2288AA2269EB6 /* Pods_Mafia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22AFD2689280BA709112DFB /* Pods_Mafia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributionViewController.swift; sourceTree = "<group>"; };
 		12DB5DBD1D762D2F00771C34 /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DB5DC01D762D2F00771C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12DB5DC21D762D2F00771C34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12DB5DC21D762D2F00771C34 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		12DB5DC51D762D3000771C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12DB5DC81D762D3000771C34 /* Mafia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mafia.xcdatamodel; sourceTree = "<group>"; };
 		12DB5DCA1D762D3000771C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12DB5DCD1D762D3000771C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12DB5DCF1D762D3000771C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12DB5DD51D7639F100771C34 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		12DB5DD81D76E51500771C34 /* CountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountTableViewController.swift; sourceTree = "<group>"; };
+		12DB5DDA1D76EED000771C34 /* CountTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountTableCell.swift; sourceTree = "<group>"; };
+		B4F1A6CB5DE95C6D78DBE7C4 /* Pods-Mafia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.release.xcconfig"; sourceTree = "<group>"; };
+		D22AFD2689280BA709112DFB /* Pods_Mafia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mafia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8247D7A268152698C68415F /* Pods-Mafia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14547AA42A2288AA2269EB6 /* Pods_Mafia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +53,11 @@
 		12DB5DB41D762D2F00771C34 = {
 			isa = PBXGroup;
 			children = (
+				12DB5DD51D7639F100771C34 /* Podfile */,
 				12DB5DBF1D762D2F00771C34 /* Mafia */,
 				12DB5DBE1D762D2F00771C34 /* Products */,
+				5D9485A62646CC0CD6A4F179 /* Pods */,
+				4E6E97C03C03C6A09A1B6D06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				12DB5DC01D762D2F00771C34 /* AppDelegate.swift */,
-				12DB5DC21D762D2F00771C34 /* ViewController.swift */,
+				12DB5DC21D762D2F00771C34 /* MainController.swift */,
+				12DB5DD81D76E51500771C34 /* CountTableViewController.swift */,
+				12DB5DDA1D76EED000771C34 /* CountTableCell.swift */,
+				1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */,
 				12DB5DC41D762D3000771C34 /* Main.storyboard */,
 				12DB5DCA1D762D3000771C34 /* Assets.xcassets */,
 				12DB5DCC1D762D3000771C34 /* LaunchScreen.storyboard */,
@@ -67,6 +86,23 @@
 			path = Mafia;
 			sourceTree = "<group>";
 		};
+		4E6E97C03C03C6A09A1B6D06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D22AFD2689280BA709112DFB /* Pods_Mafia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D9485A62646CC0CD6A4F179 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8247D7A268152698C68415F /* Pods-Mafia.debug.xcconfig */,
+				B4F1A6CB5DE95C6D78DBE7C4 /* Pods-Mafia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12DB5DD21D762D3000771C34 /* Build configuration list for PBXNativeTarget "Mafia" */;
 			buildPhases = (
+				600507F73C7C2EF5EBC92DB3 /* [CP] Check Pods Manifest.lock */,
 				12DB5DB91D762D2F00771C34 /* Sources */,
 				12DB5DBA1D762D2F00771C34 /* Frameworks */,
 				12DB5DBB1D762D2F00771C34 /* Resources */,
+				F3BA9CA711735270D3259E66 /* [CP] Embed Pods Frameworks */,
+				4526E7DB49E564D2E8B9C0A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,20 +166,72 @@
 			files = (
 				12DB5DCE1D762D3000771C34 /* LaunchScreen.storyboard in Resources */,
 				12DB5DCB1D762D3000771C34 /* Assets.xcassets in Resources */,
+				12DB5DD61D7639F100771C34 /* Podfile in Resources */,
 				12DB5DC61D762D3000771C34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4526E7DB49E564D2E8B9C0A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mafia/Pods-Mafia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		600507F73C7C2EF5EBC92DB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BA9CA711735270D3259E66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mafia/Pods-Mafia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		12DB5DB91D762D2F00771C34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12DB5DC31D762D2F00771C34 /* ViewController.swift in Sources */,
+				12DB5DC31D762D2F00771C34 /* MainController.swift in Sources */,
+				12DB5DD91D76E51500771C34 /* CountTableViewController.swift in Sources */,
+				1213657F1D783B4A00E6DA58 /* DistributionViewController.swift in Sources */,
 				12DB5DC11D762D2F00771C34 /* AppDelegate.swift in Sources */,
 				12DB5DC91D762D3000771C34 /* Mafia.xcdatamodeld in Sources */,
+				12DB5DDB1D76EED000771C34 /* CountTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +344,7 @@
 		};
 		12DB5DD31D762D3000771C34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8247D7A268152698C68415F /* Pods-Mafia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mafia/Info.plist;
@@ -264,6 +356,7 @@
 		};
 		12DB5DD41D762D3000771C34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F1A6CB5DE95C6D78DBE7C4 /* Pods-Mafia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mafia/Info.plist;
@@ -292,6 +385,7 @@
 				12DB5DD41D762D3000771C34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

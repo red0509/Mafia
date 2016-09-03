@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B7E66E22352BB55320284EE236204E8 /* ActionsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBF8D7C1122CC107725D668B7F3BE1 /* ActionsCollectionView.swift */; };
+		0B9DA812C5267B772527AD068A1EA769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		124C04469AE097D9FACE190C41478006 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208C3AE960D4AC64700020DBC7BC348 /* ActionCell.swift */; };
+		1BD9AF94793EAC18D11CF79CE68BFB2B /* AlertVisualStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4119C8502DB29510442D59E7AAB1A /* AlertVisualStyle.swift */; };
+		1D8DF6F0AFCEAB85CE5B1F048F8E641E /* UIView+SDCAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C08504D48A07C303A973343D287F506A /* UIView+SDCAutoLayout.m */; };
+		1E26A34F9173C922BF7D6A184E3E8980 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		1F61A481BA1DB9370CF400A2BEFE5046 /* Pods-Mafia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA58ECB93B8493D38FA032F27EBEA32 /* Pods-Mafia-dummy.m */; };
+		27EAF30B6397307422CCD7B1339F1960 /* UIView+SDCAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F99E7E859CB50E1C068B6C608F7A2653 /* UIView+SDCAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B1C2859BBB4306B1B8DCFC38A1ACE9A /* ActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9A4A705D6DF012CD4EC080811012E /* ActionSheetView.swift */; };
+		2B64FA3B7F10221374B276465AEF9E0A /* ActionCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1B97DE352F08B3D7D96B76A084DF6671 /* ActionCell.xib */; };
+		2D07FF10FF1BA0A5A79107636D612643 /* AlertBehaviors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BEA40B6A31B2F424EE0377068CA086 /* AlertBehaviors.swift */; };
+		49506BB2B0372A734287AE44E51975B4 /* AlertControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B122C5A276553D23A23432A82B74AB /* AlertControllerView.swift */; };
+		49FDAA0B871689F3603BEA5ABBFB2653 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE319E67E90CFC19686C82911BD9DE28 /* TextFieldsViewController.swift */; };
+		4A68CE5E415FC4924880422672B8C3B4 /* SDCAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF331819E0C7686062AE1D5B7C524D2 /* SDCAlertView-dummy.m */; };
+		4C90727CA77929171552E07DFF21278D /* AlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6204445EE6BC539A207C2BFA4AB5D /* AlertLabel.swift */; };
+		55107CFEFD8E3EA7820CF00508C772EC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7F0DB803E31842E5777CE3D358B6E /* AlertView.swift */; };
+		62B1EB89FCD6148C697385834DE4C928 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606E6BF1DF645D7B5666ED106EDC392C /* PresentationController.swift */; };
+		75E5BDA333AC52A7DD874E2ADC57C8B3 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB209582E191EBAFBD3124876B8CC5B /* TextFieldCell.swift */; };
+		79C83EE62816287ECDF63CF804BA97BE /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD834C87E25D0AB99EA2CC98AD0E2509 /* AlertAction.swift */; };
+		7FD5CCE026EBE3D8FDD66CBC2302E808 /* ActionSheetView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 3965D7F8A3FD771BC9717E9FEDB50EDC /* ActionSheetView.xib */; };
+		8E002DA983E2896BC43F19F752E5FCCC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16D4DB83F753A508E8D608ECA725B3 /* UIViewController+Extension.swift */; };
+		926F4A77CBD7D8AD97F035C8DB58FB02 /* Pods-Mafia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C36B8A25744A3C1F0C172B72DFCDC2F8 /* Pods-Mafia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		928744995EAC4552641CBFDC311DE36D /* TextFieldCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = BCAD03B2D7FF01CD7AAE52773B2510B3 /* TextFieldCell.xib */; };
+		9A3E49974BB132A19DDC8348E34CCA99 /* SDCAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7AFCD2566E84BC5D55BCBD5E3A91712 /* SDCAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5970968CAD0F789F3AE4699C7756DDF /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99645B27669A2F40678E998FE2B8242B /* Transition.swift */; };
+		B98AA710D1A85B2E320D48F4973F492C /* ActionsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB6453CDC2E498872524B06A908082 /* ActionsCollectionViewFlowLayout.swift */; };
+		D9059D4B9862CBD894BF99F61F15F7FD /* AlertController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA416E132C79BF2DA289DD274AF4043E /* AlertController+Convenience.swift */; };
+		DA0F3FB6CA23A290706D03F12EC79162 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9F72DF106CD1A987C58AC7B1F8C1C /* AlertController.swift */; };
+		EBCF64C78415C43F61498E78BB10E70D /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6E697D0D703839C02CA5B6E8FF84C /* AnimationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		429F8482B2891B32EDE244841656465C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EF7BCBEC94A979D754E0E9F254F3A10;
+			remoteInfo = SDCAlertView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		126CC91EA455591F71F4E43345C8787A /* SDCAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SDCAlertView.modulemap; sourceTree = "<group>"; };
+		12F643B6A019C35AE27D6917344CE5D2 /* Pods-Mafia-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mafia-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1B97DE352F08B3D7D96B76A084DF6671 /* ActionCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ActionCell.xib; path = Source/Actions/ActionCell.xib; sourceTree = "<group>"; };
+		1CF3684EECD4577B616445FE9E53E153 /* SDCAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDCAlertView.xcconfig; sourceTree = "<group>"; };
+		250B960B892AB2D02F153AD4EAD12107 /* Pods_Mafia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mafia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCB6453CDC2E498872524B06A908082 /* ActionsCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionsCollectionViewFlowLayout.swift; path = Source/Actions/ActionsCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		3044712754035B8E635CE45C771F4214 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A7F0DB803E31842E5777CE3D358B6E /* AlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = Source/Views/AlertView.swift; sourceTree = "<group>"; };
+		3965D7F8A3FD771BC9717E9FEDB50EDC /* ActionSheetView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ActionSheetView.xib; path = Source/Views/ActionSheetView.xib; sourceTree = "<group>"; };
+		4208C3AE960D4AC64700020DBC7BC348 /* ActionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionCell.swift; path = Source/Actions/ActionCell.swift; sourceTree = "<group>"; };
+		48BEA40B6A31B2F424EE0377068CA086 /* AlertBehaviors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertBehaviors.swift; path = Source/AlertBehaviors.swift; sourceTree = "<group>"; };
+		4A16D4DB83F753A508E8D608ECA725B3 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "Source/Presentation/UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4C1EB1F62273E79D5D4497FECD2C516B /* Pods-Mafia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mafia.debug.xcconfig"; sourceTree = "<group>"; };
+		54A9A4A705D6DF012CD4EC080811012E /* ActionSheetView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetView.swift; path = Source/Views/ActionSheetView.swift; sourceTree = "<group>"; };
+		57B9F72DF106CD1A987C58AC7B1F8C1C /* AlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = Source/AlertController.swift; sourceTree = "<group>"; };
+		5AB209582E191EBAFBD3124876B8CC5B /* TextFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldCell.swift; path = "Source/Text Fields/TextFieldCell.swift"; sourceTree = "<group>"; };
+		5DF4119C8502DB29510442D59E7AAB1A /* AlertVisualStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertVisualStyle.swift; path = Source/AlertVisualStyle.swift; sourceTree = "<group>"; };
+		606E6BF1DF645D7B5666ED106EDC392C /* PresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationController.swift; path = Source/Presentation/PresentationController.swift; sourceTree = "<group>"; };
+		6FA58ECB93B8493D38FA032F27EBEA32 /* Pods-Mafia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mafia-dummy.m"; sourceTree = "<group>"; };
+		6FF331819E0C7686062AE1D5B7C524D2 /* SDCAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDCAlertView-dummy.m"; sourceTree = "<group>"; };
+		70DBF8D7C1122CC107725D668B7F3BE1 /* ActionsCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionsCollectionView.swift; path = Source/Actions/ActionsCollectionView.swift; sourceTree = "<group>"; };
+		7688455CE32BA10EF85B91A572715C3C /* Pods-Mafia-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mafia-frameworks.sh"; sourceTree = "<group>"; };
+		8F88B85C9962797793728A77B525AFA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99645B27669A2F40678E998FE2B8242B /* Transition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transition.swift; path = Source/Presentation/Transition.swift; sourceTree = "<group>"; };
+		A4104AF520BF50BC4A1E9D78CB3B89BC /* Pods-Mafia-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mafia-acknowledgements.plist"; sourceTree = "<group>"; };
+		AD834C87E25D0AB99EA2CC98AD0E2509 /* AlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertAction.swift; path = Source/Actions/AlertAction.swift; sourceTree = "<group>"; };
+		B9B6204445EE6BC539A207C2BFA4AB5D /* AlertLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertLabel.swift; path = Source/Views/AlertLabel.swift; sourceTree = "<group>"; };
+		BA416E132C79BF2DA289DD274AF4043E /* AlertController+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AlertController+Convenience.swift"; path = "Source/AlertController+Convenience.swift"; sourceTree = "<group>"; };
+		BCAD03B2D7FF01CD7AAE52773B2510B3 /* TextFieldCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TextFieldCell.xib; path = "Source/Text Fields/TextFieldCell.xib"; sourceTree = "<group>"; };
+		C08504D48A07C303A973343D287F506A /* UIView+SDCAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDCAutoLayout.m"; path = "Source/Supporting Files/UIView+SDCAutoLayout.m"; sourceTree = "<group>"; };
+		C36B8A25744A3C1F0C172B72DFCDC2F8 /* Pods-Mafia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mafia-umbrella.h"; sourceTree = "<group>"; };
+		C3B122C5A276553D23A23432A82B74AB /* AlertControllerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertControllerView.swift; path = Source/Views/AlertControllerView.swift; sourceTree = "<group>"; };
+		CE319E67E90CFC19686C82911BD9DE28 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldsViewController.swift; path = "Source/Text Fields/TextFieldsViewController.swift"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E32ACDA260AEE70390CBAE80BD81ACBC /* SDCAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDCAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63C0F1275F62EDE47F46C1804D495C1 /* SDCAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDCAlertView-prefix.pch"; sourceTree = "<group>"; };
+		E6F6E697D0D703839C02CA5B6E8FF84C /* AnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationController.swift; path = Source/Presentation/AnimationController.swift; sourceTree = "<group>"; };
+		EC46D73786674CB809FDD3C9751FC222 /* Pods-Mafia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Mafia.modulemap"; sourceTree = "<group>"; };
+		F0292295E5035CCA475EA1AB3F32A17A /* Pods-Mafia-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mafia-resources.sh"; sourceTree = "<group>"; };
+		F7062AC364D253658081CF38151F9940 /* Pods-Mafia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mafia.release.xcconfig"; sourceTree = "<group>"; };
+		F7AFCD2566E84BC5D55BCBD5E3A91712 /* SDCAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDCAlertView-umbrella.h"; sourceTree = "<group>"; };
+		F99E7E859CB50E1C068B6C608F7A2653 /* UIView+SDCAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SDCAutoLayout.h"; path = "Source/Supporting Files/UIView+SDCAutoLayout.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F4C0DDE0DF8E14F43C445C46B9759F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B9DA812C5267B772527AD068A1EA769 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC7256C2BC3875EEEE49C453E9BA03E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E26A34F9173C922BF7D6A184E3E8980 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1942194851BCA6395AD0F5A5E3022637 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AD1D99C3505F4BFCBBD97E4EAFF67 /* Pods-Mafia */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1E6AD1D99C3505F4BFCBBD97E4EAFF67 /* Pods-Mafia */ = {
+			isa = PBXGroup;
+			children = (
+				8F88B85C9962797793728A77B525AFA9 /* Info.plist */,
+				EC46D73786674CB809FDD3C9751FC222 /* Pods-Mafia.modulemap */,
+				12F643B6A019C35AE27D6917344CE5D2 /* Pods-Mafia-acknowledgements.markdown */,
+				A4104AF520BF50BC4A1E9D78CB3B89BC /* Pods-Mafia-acknowledgements.plist */,
+				6FA58ECB93B8493D38FA032F27EBEA32 /* Pods-Mafia-dummy.m */,
+				7688455CE32BA10EF85B91A572715C3C /* Pods-Mafia-frameworks.sh */,
+				F0292295E5035CCA475EA1AB3F32A17A /* Pods-Mafia-resources.sh */,
+				C36B8A25744A3C1F0C172B72DFCDC2F8 /* Pods-Mafia-umbrella.h */,
+				4C1EB1F62273E79D5D4497FECD2C516B /* Pods-Mafia.debug.xcconfig */,
+				F7062AC364D253658081CF38151F9940 /* Pods-Mafia.release.xcconfig */,
+			);
+			name = "Pods-Mafia";
+			path = "Target Support Files/Pods-Mafia";
+			sourceTree = "<group>";
+		};
+		2A9CB618A7ABF24DD02DDA2A1449ED1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				250B960B892AB2D02F153AD4EAD12107 /* Pods_Mafia.framework */,
+				E32ACDA260AEE70390CBAE80BD81ACBC /* SDCAlertView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		614CC372D1326F98C263FB101D45D2E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C104BF9CA453A65E14043B01E065B622 /* SDCAlertView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				614CC372D1326F98C263FB101D45D2E2 /* Pods */,
+				2A9CB618A7ABF24DD02DDA2A1449ED1C /* Products */,
+				1942194851BCA6395AD0F5A5E3022637 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A7BD54D36EA1AC91CBAC2FA364BC0743 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3044712754035B8E635CE45C771F4214 /* Info.plist */,
+				126CC91EA455591F71F4E43345C8787A /* SDCAlertView.modulemap */,
+				1CF3684EECD4577B616445FE9E53E153 /* SDCAlertView.xcconfig */,
+				6FF331819E0C7686062AE1D5B7C524D2 /* SDCAlertView-dummy.m */,
+				E63C0F1275F62EDE47F46C1804D495C1 /* SDCAlertView-prefix.pch */,
+				F7AFCD2566E84BC5D55BCBD5E3A91712 /* SDCAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDCAlertView";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C104BF9CA453A65E14043B01E065B622 /* SDCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4208C3AE960D4AC64700020DBC7BC348 /* ActionCell.swift */,
+				1B97DE352F08B3D7D96B76A084DF6671 /* ActionCell.xib */,
+				70DBF8D7C1122CC107725D668B7F3BE1 /* ActionsCollectionView.swift */,
+				2FCB6453CDC2E498872524B06A908082 /* ActionsCollectionViewFlowLayout.swift */,
+				54A9A4A705D6DF012CD4EC080811012E /* ActionSheetView.swift */,
+				3965D7F8A3FD771BC9717E9FEDB50EDC /* ActionSheetView.xib */,
+				AD834C87E25D0AB99EA2CC98AD0E2509 /* AlertAction.swift */,
+				48BEA40B6A31B2F424EE0377068CA086 /* AlertBehaviors.swift */,
+				57B9F72DF106CD1A987C58AC7B1F8C1C /* AlertController.swift */,
+				BA416E132C79BF2DA289DD274AF4043E /* AlertController+Convenience.swift */,
+				C3B122C5A276553D23A23432A82B74AB /* AlertControllerView.swift */,
+				B9B6204445EE6BC539A207C2BFA4AB5D /* AlertLabel.swift */,
+				38A7F0DB803E31842E5777CE3D358B6E /* AlertView.swift */,
+				5DF4119C8502DB29510442D59E7AAB1A /* AlertVisualStyle.swift */,
+				E6F6E697D0D703839C02CA5B6E8FF84C /* AnimationController.swift */,
+				606E6BF1DF645D7B5666ED106EDC392C /* PresentationController.swift */,
+				5AB209582E191EBAFBD3124876B8CC5B /* TextFieldCell.swift */,
+				BCAD03B2D7FF01CD7AAE52773B2510B3 /* TextFieldCell.xib */,
+				CE319E67E90CFC19686C82911BD9DE28 /* TextFieldsViewController.swift */,
+				99645B27669A2F40678E998FE2B8242B /* Transition.swift */,
+				F99E7E859CB50E1C068B6C608F7A2653 /* UIView+SDCAutoLayout.h */,
+				C08504D48A07C303A973343D287F506A /* UIView+SDCAutoLayout.m */,
+				4A16D4DB83F753A508E8D608ECA725B3 /* UIViewController+Extension.swift */,
+				A7BD54D36EA1AC91CBAC2FA364BC0743 /* Support Files */,
+			);
+			path = SDCAlertView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D84E53CBD34A634CAF8E695C33864E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926F4A77CBD7D8AD97F035C8DB58FB02 /* Pods-Mafia-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7AACF85C166AB7969D3E7D7A84E543 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3E49974BB132A19DDC8348E34CCA99 /* SDCAlertView-umbrella.h in Headers */,
+				27EAF30B6397307422CCD7B1339F1960 /* UIView+SDCAutoLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5D17492FD5277138293700120282DBDF /* Pods-Mafia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AAD9B079D641DEFBE74D9C9079C1C91 /* Build configuration list for PBXNativeTarget "Pods-Mafia" */;
+			buildPhases = (
+				79F01CABCEFE4C85FEB20D50FD2105B9 /* Sources */,
+				8F4C0DDE0DF8E14F43C445C46B9759F8 /* Frameworks */,
+				8D84E53CBD34A634CAF8E695C33864E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC17AF7FFCC336EBD0F8D969C253DABB /* PBXTargetDependency */,
+			);
+			name = "Pods-Mafia";
+			productName = "Pods-Mafia";
+			productReference = 250B960B892AB2D02F153AD4EAD12107 /* Pods_Mafia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7EF7BCBEC94A979D754E0E9F254F3A10 /* SDCAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE4B78F0289E97658036A7DAC735EB2A /* Build configuration list for PBXNativeTarget "SDCAlertView" */;
+			buildPhases = (
+				08053BEE93FA3BDF89ACE317B2E7F89E /* Sources */,
+				EC7256C2BC3875EEEE49C453E9BA03E1 /* Frameworks */,
+				9A7AACF85C166AB7969D3E7D7A84E543 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDCAlertView;
+			productName = SDCAlertView;
+			productReference = E32ACDA260AEE70390CBAE80BD81ACBC /* SDCAlertView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2A9CB618A7ABF24DD02DDA2A1449ED1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D17492FD5277138293700120282DBDF /* Pods-Mafia */,
+				7EF7BCBEC94A979D754E0E9F254F3A10 /* SDCAlertView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08053BEE93FA3BDF89ACE317B2E7F89E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				124C04469AE097D9FACE190C41478006 /* ActionCell.swift in Sources */,
+				2B64FA3B7F10221374B276465AEF9E0A /* ActionCell.xib in Sources */,
+				0B7E66E22352BB55320284EE236204E8 /* ActionsCollectionView.swift in Sources */,
+				B98AA710D1A85B2E320D48F4973F492C /* ActionsCollectionViewFlowLayout.swift in Sources */,
+				2B1C2859BBB4306B1B8DCFC38A1ACE9A /* ActionSheetView.swift in Sources */,
+				7FD5CCE026EBE3D8FDD66CBC2302E808 /* ActionSheetView.xib in Sources */,
+				79C83EE62816287ECDF63CF804BA97BE /* AlertAction.swift in Sources */,
+				2D07FF10FF1BA0A5A79107636D612643 /* AlertBehaviors.swift in Sources */,
+				D9059D4B9862CBD894BF99F61F15F7FD /* AlertController+Convenience.swift in Sources */,
+				DA0F3FB6CA23A290706D03F12EC79162 /* AlertController.swift in Sources */,
+				49506BB2B0372A734287AE44E51975B4 /* AlertControllerView.swift in Sources */,
+				4C90727CA77929171552E07DFF21278D /* AlertLabel.swift in Sources */,
+				55107CFEFD8E3EA7820CF00508C772EC /* AlertView.swift in Sources */,
+				1BD9AF94793EAC18D11CF79CE68BFB2B /* AlertVisualStyle.swift in Sources */,
+				EBCF64C78415C43F61498E78BB10E70D /* AnimationController.swift in Sources */,
+				62B1EB89FCD6148C697385834DE4C928 /* PresentationController.swift in Sources */,
+				4A68CE5E415FC4924880422672B8C3B4 /* SDCAlertView-dummy.m in Sources */,
+				75E5BDA333AC52A7DD874E2ADC57C8B3 /* TextFieldCell.swift in Sources */,
+				928744995EAC4552641CBFDC311DE36D /* TextFieldCell.xib in Sources */,
+				49FDAA0B871689F3603BEA5ABBFB2653 /* TextFieldsViewController.swift in Sources */,
+				B5970968CAD0F789F3AE4699C7756DDF /* Transition.swift in Sources */,
+				1D8DF6F0AFCEAB85CE5B1F048F8E641E /* UIView+SDCAutoLayout.m in Sources */,
+				8E002DA983E2896BC43F19F752E5FCCC /* UIViewController+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F01CABCEFE4C85FEB20D50FD2105B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F61A481BA1DB9370CF400A2BEFE5046 /* Pods-Mafia-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC17AF7FFCC336EBD0F8D969C253DABB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDCAlertView;
+			target = 7EF7BCBEC94A979D754E0E9F254F3A10 /* SDCAlertView */;
+			targetProxy = 429F8482B2891B32EDE244841656465C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1570DC5261AF716A68A3A120C9A9E7C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CF3684EECD4577B616445FE9E53E153 /* SDCAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDCAlertView/SDCAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDCAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SDCAlertView/SDCAlertView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SDCAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0167A089AA940F99BFAED9F7F54E9F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C1EB1F62273E79D5D4497FECD2C516B /* Pods-Mafia.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mafia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mafia/Pods-Mafia.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Mafia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB5EECB62AB4AB4A8583CB770A78A538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CF3684EECD4577B616445FE9E53E153 /* SDCAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDCAlertView/SDCAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDCAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SDCAlertView/SDCAlertView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SDCAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FA6A5FDE2B8459A5977882B2661808F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7062AC364D253658081CF38151F9940 /* Pods-Mafia.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mafia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mafia/Pods-Mafia.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Mafia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AAD9B079D641DEFBE74D9C9079C1C91 /* Build configuration list for PBXNativeTarget "Pods-Mafia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0167A089AA940F99BFAED9F7F54E9F0 /* Debug */,
+				FA6A5FDE2B8459A5977882B2661808F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE4B78F0289E97658036A7DAC735EB2A /* Build configuration list for PBXNativeTarget "SDCAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1570DC5261AF716A68A3A120C9A9E7C8 /* Debug */,
+				EB5EECB62AB4AB4A8583CB770A78A538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

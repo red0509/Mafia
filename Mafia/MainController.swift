@@ -12,8 +12,10 @@ import SDCAlertView
 class MainController: UIViewController, UIPickerViewDelegate ,UIPickerViewDataSource {
     
     
+    var countPlayers = 0
+    
     var pickerComponent = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Меню"
@@ -27,7 +29,19 @@ class MainController: UIViewController, UIPickerViewDelegate ,UIPickerViewDataSo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    //     MARK: - Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showCountFromMain" {
+            
+            let controller = segue.destinationViewController as! CountTableViewController
+            controller.detailItemFromMain = self.countPlayers
+            
+        }
+    }
+    
     // MARK: Action
     
     @IBAction func beginAction(sender: UIButton) {
@@ -45,27 +59,26 @@ class MainController: UIViewController, UIPickerViewDelegate ,UIPickerViewDataSo
         picker.centerXAnchor.constraintEqualToAnchor(contentView.centerXAnchor).active = true
         picker.topAnchor.constraintEqualToAnchor(contentView.topAnchor).active = true
         picker.bottomAnchor.constraintEqualToAnchor(contentView.bottomAnchor).active = true
-
+        
         alert.addAction(AlertAction(title: "Отмена", style: .Preferred))
         
         alert.addAction(AlertAction(title: "OK", style: .Default, handler: { (alert : AlertAction) in
             
-            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("CountTableViewController") as! CountTableViewController
-            vc.countPlayers = picker.selectedRowInComponent(0)+6
-            self.navigationController?.showViewController(vc, sender: vc)
+            self.countPlayers = picker.selectedRowInComponent(0)+6
+            self.performSegueWithIdentifier("showCountFromMain", sender: sender)
             
         }))
-    
-//        if #available(iOS 9, *) {
-//        }
+        
+        //        if #available(iOS 9, *) {
+        //        }
         alert.present()
- 
+        
     }
     
     // MARK: UIPickerViewDataSource
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-         return 1
+        return 1
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
@@ -73,11 +86,11 @@ class MainController: UIViewController, UIPickerViewDelegate ,UIPickerViewDataSo
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-       return pickerComponent[row]
+        return pickerComponent[row]
     }
     
     
-
-
+    
+    
 }
 

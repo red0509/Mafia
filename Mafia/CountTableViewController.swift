@@ -7,11 +7,50 @@
 //
 
 import UIKit
+import CoreData
 
 
 class CountTableViewController: UITableViewController {
     
     var countPlayers = 0
+    var player : valuePlayers!
+    var countMap : Int {
+        return 7
+    }
+    
+    //  MARK: - Master
+    
+    var detailItemFromMaster: Map?
+    
+    func configureViewFromMaster() {
+        if let detail = self.detailItemFromMaster {
+            
+            player = valuePlayers(citizen: detail.cardDeck[0] , commissioner: detail.cardDeck[1], mafia: detail.cardDeck[2], donMafia: detail.cardDeck[3], doctor: detail.cardDeck[4], prostitute: detail.cardDeck[5], maniac: detail.cardDeck[6])
+            print( player)
+            
+            for elem in detail.cardDeck{
+                countPlayers += elem
+            }
+        }
+    }
+    
+    //  MARK: - Main
+    
+    var detailItemFromMain: Int?
+    
+    func configureViewFromMain() {
+        if let detail = self.detailItemFromMain {
+            countPlayers = detail
+            let mafia = countPlayers/3
+            if countPlayers >= 8{
+                player = valuePlayers(citizen: countPlayers - 3 - mafia , commissioner: 1, mafia: mafia - 1, donMafia: 1, doctor: 1, prostitute: 1, maniac: 0)
+            }else{
+                player = valuePlayers(citizen: countPlayers - 1 - mafia , commissioner: 1, mafia: mafia - 1, donMafia: 1, doctor: 0, prostitute: 0, maniac: 0)
+            }
+        }
+    }
+    
+    
     struct valuePlayers {
         var citizen : Int
         var commissioner : Int
@@ -45,23 +84,20 @@ class CountTableViewController: UITableViewController {
         }
     }
     
-    var player : valuePlayers!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Колода"
         
-        let mafia =  countPlayers/3
-        if countPlayers >= 8{
-            player = valuePlayers(citizen: countPlayers - 3 - mafia , commissioner: 1, mafia: mafia - 1, donMafia: 1, doctor: 1, prostitute: 1, maniac: 0)
-        }else{
-            player = valuePlayers(citizen: countPlayers - 1 - mafia , commissioner: 1, mafia: mafia - 1, donMafia: 1, doctor: 0, prostitute: 0, maniac: 0)
-        }
+        self.configureViewFromMain()
+        self.configureViewFromMaster()
         
         let button = UIBarButtonItem(title: "Готово", style: .Plain, target: self, action: #selector(readyButton(_:)))
         
-        self.navigationItem.rightBarButtonItem = button
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject(_:)))
+        
+        self.navigationItem.rightBarButtonItems = [button , addButton]
         
     }
     
@@ -72,12 +108,38 @@ class CountTableViewController: UITableViewController {
     
     func readyButton(sender : UIBarButtonItem)  {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("DistributionViewController") as! DistributionViewController
-        for i in 0..<7{
+        for i in 0..<countMap{
             vc.arrayPlayers.append(player[i])
         }
         
         self.navigationController?.showViewController(vc, sender: vc)
         
+    }
+    func insertNewObject(sender: AnyObject) {
+        
+        var arrayMap = [Int]()
+        
+        let managedObjectContext =  DataManager.sharedInstance.managedObjectContext
+        
+        let map = NSEntityDescription.insertNewObjectForEntityForName("Map", inManagedObjectContext: managedObjectContext) as! Map
+        countPlayers = 0
+        for i in 0..<countMap{
+            countPlayers += player[i]
+        }
+        
+        map.title = "Колода на \(countPlayers) человек"
+        for i in 0..<countMap{
+            arrayMap.append(player[i])
+        }
+        map.cardDeck = arrayMap
+        
+        do {
+            try managedObjectContext.save()
+            let alert = UIAlertController(title: "Начало", message:  "Выберете количество человек", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        } catch {
+            abort()
+        }
     }
     
     // MARK: - UITableViewDataSource
@@ -101,7 +163,7 @@ class CountTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return countMap
     }
     
     @IBAction func stepperAction(sender: UIStepper) {
@@ -145,7 +207,6 @@ class CountTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("countCell", forIndexPath: indexPath) as! CountTableCell
-        
         if indexPath.row == 0{
             cell.name.text = "Мирный житель"
             cell.stepper.value = Double(self.player.citizen)
@@ -178,51 +239,5 @@ class CountTableViewController: UITableViewController {
         
         return cell
     }
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-     if editingStyle == .Delete {
-     // Delete the row from the data source
-     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-     } else if editingStyle == .Insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

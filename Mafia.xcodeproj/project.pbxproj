@@ -17,6 +17,10 @@
 		12DB5DD61D7639F100771C34 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 12DB5DD51D7639F100771C34 /* Podfile */; };
 		12DB5DD91D76E51500771C34 /* CountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DD81D76E51500771C34 /* CountTableViewController.swift */; };
 		12DB5DDB1D76EED000771C34 /* CountTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DDA1D76EED000771C34 /* CountTableCell.swift */; };
+		12E0AF111D7CDD4A004560EA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E0AF101D7CDD4A004560EA /* DataManager.swift */; };
+		12E0AF3C1D7CF385004560EA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E0AF3B1D7CF385004560EA /* MasterViewController.swift */; };
+		12E0AF3F1D7D933F004560EA /* Map+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E0AF3D1D7D933F004560EA /* Map+CoreDataProperties.swift */; };
+		12E0AF401D7D933F004560EA /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E0AF3E1D7D933F004560EA /* Map.swift */; };
 		F14547AA42A2288AA2269EB6 /* Pods_Mafia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22AFD2689280BA709112DFB /* Pods_Mafia.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		12DB5DD51D7639F100771C34 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		12DB5DD81D76E51500771C34 /* CountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountTableViewController.swift; sourceTree = "<group>"; };
 		12DB5DDA1D76EED000771C34 /* CountTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountTableCell.swift; sourceTree = "<group>"; };
+		12E0AF101D7CDD4A004560EA /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		12E0AF3B1D7CF385004560EA /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		12E0AF3D1D7D933F004560EA /* Map+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Map+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		12E0AF3E1D7D933F004560EA /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		B4F1A6CB5DE95C6D78DBE7C4 /* Pods-Mafia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.release.xcconfig"; sourceTree = "<group>"; };
 		D22AFD2689280BA709112DFB /* Pods_Mafia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mafia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8247D7A268152698C68415F /* Pods-Mafia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,11 +80,14 @@
 		12DB5DBF1D762D2F00771C34 /* Mafia */ = {
 			isa = PBXGroup;
 			children = (
+				12E0AF411D7E0FE7004560EA /* Cell */,
+				12E0AED51D7CD933004560EA /* Models */,
+				12E0AF101D7CDD4A004560EA /* DataManager.swift */,
 				12DB5DC01D762D2F00771C34 /* AppDelegate.swift */,
 				12DB5DC21D762D2F00771C34 /* MainController.swift */,
 				12DB5DD81D76E51500771C34 /* CountTableViewController.swift */,
-				12DB5DDA1D76EED000771C34 /* CountTableCell.swift */,
 				1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */,
+				12E0AF3B1D7CF385004560EA /* MasterViewController.swift */,
 				12DB5DC41D762D3000771C34 /* Main.storyboard */,
 				12DB5DCA1D762D3000771C34 /* Assets.xcassets */,
 				12DB5DCC1D762D3000771C34 /* LaunchScreen.storyboard */,
@@ -84,6 +95,23 @@
 				12DB5DC71D762D3000771C34 /* Mafia.xcdatamodeld */,
 			);
 			path = Mafia;
+			sourceTree = "<group>";
+		};
+		12E0AED51D7CD933004560EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12E0AF3D1D7D933F004560EA /* Map+CoreDataProperties.swift */,
+				12E0AF3E1D7D933F004560EA /* Map.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		12E0AF411D7E0FE7004560EA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				12DB5DDA1D76EED000771C34 /* CountTableCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		4E6E97C03C03C6A09A1B6D06 /* Frameworks */ = {
@@ -226,11 +254,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12E0AF401D7D933F004560EA /* Map.swift in Sources */,
+				12E0AF3C1D7CF385004560EA /* MasterViewController.swift in Sources */,
 				12DB5DC31D762D2F00771C34 /* MainController.swift in Sources */,
 				12DB5DD91D76E51500771C34 /* CountTableViewController.swift in Sources */,
 				1213657F1D783B4A00E6DA58 /* DistributionViewController.swift in Sources */,
 				12DB5DC11D762D2F00771C34 /* AppDelegate.swift in Sources */,
+				12E0AF3F1D7D933F004560EA /* Map+CoreDataProperties.swift in Sources */,
 				12DB5DC91D762D3000771C34 /* Mafia.xcdatamodeld in Sources */,
+				12E0AF111D7CDD4A004560EA /* DataManager.swift in Sources */,
 				12DB5DDB1D76EED000771C34 /* CountTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,10 +379,12 @@
 			baseConfigurationReference = E8247D7A268152698C68415F /* Pods-Mafia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Mafia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AntonPavlov.Mafia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -359,6 +393,7 @@
 			baseConfigurationReference = B4F1A6CB5DE95C6D78DBE7C4 /* Pods-Mafia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Mafia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AntonPavlov.Mafia;

@@ -35,17 +35,17 @@ class DistributionViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func animationImageMap(nameImage : String, textLabel : String){
+    func animationImageMap(_ nameImage : String, textLabel : String){
         
         let time = 0.5
         
-        UIView.animateWithDuration(time, animations: {
+        UIView.animate(withDuration: time, animations: {
             self.imageMap.alpha = 0
             self.label.alpha = 0
         })
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            UIView.animateWithDuration(time, animations: {
+        let delayTime = DispatchTime.now() + Double(Int64(time * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+            UIView.animate(withDuration: time, animations: {
                 self.label.alpha = 1
                 self.imageMap.alpha = 1
             })
@@ -57,11 +57,11 @@ class DistributionViewController: UIViewController {
     }
     
     
-    @IBAction func ActionDistrib(sender: UIButton) {
+    @IBAction func ActionDistrib(_ sender: UIButton) {
         
-        let emptyArray = Array(count: self.arrayPlayers.count, repeatedValue: 0)
+        let emptyArray = Array(repeating: 0, count: self.arrayPlayers.count)
         if arrayPlayers != emptyArray{
-            self.buttonDistrib.setTitle( "Запомнил", forState: .Normal)
+            self.buttonDistrib.setTitle( "Запомнил", for: UIControlState())
         }
         if hideMap {
             
@@ -113,24 +113,25 @@ class DistributionViewController: UIViewController {
                 
                 animationImageMap("back.png", textLabel: "")
                 
-                let alert = UIAlertController(title: nil, message:  "Колода раздана", preferredStyle: .Alert)
+                let alert = UIAlertController(title: nil, message:  "Колода раздана", preferredStyle: .alert)
                 
-                alert.addAction(UIAlertAction(title: "Перераспределить колоду", style: .Default , handler: { (alert : UIAlertAction) in
-                    self.navigationController?.popViewControllerAnimated(true)
+                alert.addAction(UIAlertAction(title: "Перераспределить колоду", style: .default , handler: { (alert : UIAlertAction) in
+//                    self.navigationController?.popViewController(animated: true)
+                    let _ = self.navigationController?.popViewController(animated: true)
                 }))
                 
-                alert.addAction(UIAlertAction(title: "Заново", style: .Cancel, handler: { (alert : UIAlertAction) in
-                    self.buttonDistrib.setTitle( "Начать раздачу", forState: .Normal)
+                alert.addAction(UIAlertAction(title: "Заново", style: .cancel, handler: { (alert : UIAlertAction) in
+                    self.buttonDistrib.setTitle( "Начать раздачу", for: UIControlState())
                     self.arrayPlayers = self.arrayPlayersTwo
                     self.hideMap = true
                     
                 }))
                 
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
                 
             }else{
                 animationImageMap("back.png", textLabel: "")
-                self.buttonDistrib.setTitle( "Открыть карту", forState: .Normal)
+                self.buttonDistrib.setTitle( "Открыть карту", for: UIControlState())
             }
             hideMap = true
         }

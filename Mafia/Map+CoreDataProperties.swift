@@ -13,6 +13,10 @@ import Foundation
 import CoreData
 
 extension Map {
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Map> {
+        return NSFetchRequest<Map>(entityName: "Map");
+    }
 
     @NSManaged var title: String?
     @NSManaged var cardDeck: [Int]

@@ -93,9 +93,9 @@ class CountTableViewController: UITableViewController {
         self.configureViewFromMain()
         self.configureViewFromMaster()
         
-        let button = UIBarButtonItem(title: "Готово", style: .Plain, target: self, action: #selector(readyButton(_:)))
+        let button = UIBarButtonItem(title: "Готово", style: UIBarButtonItemStyle.done, target: self, action: #selector(readyButton(_:)))
         
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject(_:)))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         
         self.navigationItem.rightBarButtonItems = [button , addButton]
         
@@ -106,22 +106,22 @@ class CountTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func readyButton(sender : UIBarButtonItem)  {
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("DistributionViewController") as! DistributionViewController
+    func readyButton(_ sender : UIBarButtonItem)  {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DistributionViewController") as! DistributionViewController
         for i in 0..<countMap{
             vc.arrayPlayers.append(player[i])
         }
         
-        self.navigationController?.showViewController(vc, sender: vc)
+        self.navigationController?.show(vc, sender: vc)
         
     }
-    func insertNewObject(sender: AnyObject) {
+    func insertNewObject(_ sender: AnyObject) {
         
         var arrayMap = [Int]()
         
         let managedObjectContext =  DataManager.sharedInstance.managedObjectContext
         
-        let map = NSEntityDescription.insertNewObjectForEntityForName("Map", inManagedObjectContext: managedObjectContext) as! Map
+        let map = NSEntityDescription.insertNewObject(forEntityName: "Map", into: managedObjectContext) as! Map
         countPlayers = 0
         for i in 0..<countMap{
             countPlayers += player[i]
@@ -135,21 +135,21 @@ class CountTableViewController: UITableViewController {
         
         do {
             try managedObjectContext.save()
-            let alert = UIAlertController(title: "Начало", message:  "Выберете количество человек", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            let alert = UIAlertController(title: "Начало", message:  "Выберете количество человек", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         } catch {
             abort()
         }
     }
     
     // MARK: - UITableViewDataSource
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let allPlayers = player.citizen + player.commissioner + player.mafia + player.donMafia + player.doctor + player.prostitute + player.maniac
-        let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
-        let label = UILabel(frame: CGRectMake(10, 5, tableView.frame.size.width, 18))
-        label.font = UIFont.systemFontOfSize(14)
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 18))
+        let label = UILabel(frame: CGRect(x: 10, y: 5, width: tableView.frame.size.width, height: 18))
+        label.font = UIFont.systemFont(ofSize: 14)
         view.addSubview(label)
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         if allPlayers == countPlayers {
             label.text = "Колода готова к игре"
             return view
@@ -162,42 +162,42 @@ class CountTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countMap
     }
     
-    @IBAction func stepperAction(sender: UIStepper) {
+    @IBAction func stepperAction(_ sender: UIStepper) {
         
         let value = Int(sender.value)
-        let cursorPosition = sender.convertPoint(CGPointZero, toView: self.tableView)
-        let indexPath = self.tableView.indexPathForRowAtPoint(cursorPosition)
-        let currentCell = self.tableView .cellForRowAtIndexPath(indexPath!) as! CountTableCell
+        let cursorPosition = sender.convert(CGPoint.zero, to: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: cursorPosition)
+        let currentCell = self.tableView .cellForRow(at: indexPath!) as! CountTableCell
         currentCell.count.text = "\(value)"
         self.tableView.reloadData()
-        if indexPath!.row == 0{
+        if (indexPath! as NSIndexPath).row == 0{
             self.player.citizen = value
             
-        }else if indexPath!.row == 1{
+        }else if (indexPath! as NSIndexPath).row == 1{
             
             self.player.commissioner = value
             
-        }else if indexPath!.row == 2{
+        }else if (indexPath! as NSIndexPath).row == 2{
             
             self.player.mafia = value
             
-        }else if indexPath!.row == 3{
+        }else if (indexPath! as NSIndexPath).row == 3{
             
             self.player.donMafia = value
             
-        }else if indexPath!.row == 4{
+        }else if (indexPath! as NSIndexPath).row == 4{
             
             self.player.doctor = value
             
-        }else if indexPath!.row == 5{
+        }else if (indexPath! as NSIndexPath).row == 5{
             
             self.player.prostitute = value
             
-        }else if indexPath!.row == 6{
+        }else if (indexPath! as NSIndexPath).row == 6{
             
             self.player.maniac = value
         }
@@ -205,33 +205,33 @@ class CountTableViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("countCell", forIndexPath: indexPath) as! CountTableCell
-        if indexPath.row == 0{
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "countCell", for: indexPath) as! CountTableCell
+        if (indexPath as NSIndexPath).row == 0{
             cell.name.text = "Мирный житель"
             cell.stepper.value = Double(self.player.citizen)
             cell.count.text = "\(self.player.citizen)"
-        }else if indexPath.row == 1{
+        }else if (indexPath as NSIndexPath).row == 1{
             cell.name.text = "Комиссар"
             cell.stepper.value = Double(self.player.commissioner)
             cell.count.text = "\(self.player.commissioner)"
-        }else if indexPath.row == 2{
+        }else if (indexPath as NSIndexPath).row == 2{
             cell.name.text = "Мафия"
             cell.stepper.value = Double(self.player.mafia)
             cell.count.text = "\(self.player.mafia)"
-        }else if indexPath.row == 3{
+        }else if (indexPath as NSIndexPath).row == 3{
             cell.name.text = "Дон мафии"
             cell.stepper.value = Double(self.player.donMafia)
             cell.count.text = "\(self.player.donMafia)"
-        }else if indexPath.row == 4{
+        }else if (indexPath as NSIndexPath).row == 4{
             cell.name.text = "Доктор"
             cell.stepper.value = Double(self.player.doctor)
             cell.count.text = "\(self.player.doctor)"
-        }else if indexPath.row == 5{
+        }else if (indexPath as NSIndexPath).row == 5{
             cell.name.text = "Любовница"
             cell.stepper.value = Double(self.player.prostitute)
             cell.count.text = "\(self.player.prostitute)"
-        }else if indexPath.row == 6{
+        }else if (indexPath as NSIndexPath).row == 6{
             cell.name.text = "Маньяк"
             cell.stepper.value = Double(self.player.maniac)
             cell.count.text = "\(self.player.maniac)"

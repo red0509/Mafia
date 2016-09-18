@@ -32,11 +32,11 @@ class MainController: UIViewController, UIPickerViewDelegate ,UIPickerViewDataSo
     
     //     MARK: - Segues
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showCountFromMain" {
             
-            let controller = segue.destinationViewController as! CountTableViewController
+            let controller = segue.destination as! CountTableViewController
             controller.detailItemFromMain = self.countPlayers
             
         }
@@ -44,10 +44,10 @@ class MainController: UIViewController, UIPickerViewDelegate ,UIPickerViewDataSo
     
     // MARK: Action
     
-    @IBAction func beginAction(sender: UIButton) {
+    @IBAction func beginAction(_ sender: UIButton) {
         
         
-        let alert = AlertController(title: "Начало", message:  "Выберете количество человек", preferredStyle: .Alert)
+        let alert = AlertController(title: "Начало", message:  "Выберете количество человек", preferredStyle: .alert)
         
         let contentView = alert.contentView
         
@@ -56,36 +56,45 @@ class MainController: UIViewController, UIPickerViewDelegate ,UIPickerViewDataSo
         picker.dataSource = self
         picker.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(picker)
-        picker.centerXAnchor.constraintEqualToAnchor(contentView.centerXAnchor).active = true
-        picker.topAnchor.constraintEqualToAnchor(contentView.topAnchor).active = true
-        picker.bottomAnchor.constraintEqualToAnchor(contentView.bottomAnchor).active = true
+        if #available(iOS 9.0, *) {
+            picker.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            picker.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            picker.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
         
-        alert.addAction(AlertAction(title: "Отмена", style: .Preferred))
-        
-        alert.addAction(AlertAction(title: "OK", style: .Default, handler: { (alert : AlertAction) in
+        alert.add(AlertAction(title: "Отмена", style: .preferred))
+        alert.add(AlertAction(title: "OK", style: .normal, handler: { (alert : AlertAction) in
             
-            self.countPlayers = picker.selectedRowInComponent(0)+6
-            self.performSegueWithIdentifier("showCountFromMain", sender: sender)
+            self.countPlayers = picker.selectedRow(inComponent: 0)+6
+            self.performSegue(withIdentifier: "showCountFromMain", sender: sender)
             
         }))
         
-        //        if #available(iOS 9, *) {
-        //        }
         alert.present()
         
     }
     
     // MARK: UIPickerViewDataSource
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return pickerComponent.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
         return pickerComponent[row]
     }
     

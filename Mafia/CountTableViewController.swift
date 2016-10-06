@@ -93,29 +93,22 @@ class CountTableViewController: UITableViewController {
         self.configureViewFromMain()
         self.configureViewFromMaster()
         
-        let button = UIBarButtonItem(title: "Готово", style: UIBarButtonItemStyle.done, target: self, action: #selector(readyButton(_:)))
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        
-        self.navigationItem.rightBarButtonItems = [button , addButton]
-        
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func readyButton(_ sender : UIBarButtonItem)  {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DistributionViewController") as! DistributionViewController
-        for i in 0..<countMap{
-            vc.arrayPlayers.append(player[i])
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDistribution"{
+            
+            let controller = segue.destination as! DistributionViewController
+            for i in 0..<countMap{
+                controller.arrayPlayers.append(player[i])
+            }
         }
-        
-        self.navigationController?.show(vc, sender: vc)
-        
     }
-    func insertNewObject(_ sender: AnyObject) {
+
+    
+    @IBAction func insertNewObjectAction(_ sender: UIBarButtonItem) {
         
         var arrayMap = [Int]()
         
@@ -140,7 +133,9 @@ class CountTableViewController: UITableViewController {
         } catch {
             abort()
         }
+        
     }
+    
     
     // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

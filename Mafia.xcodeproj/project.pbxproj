@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1213657F1D783B4A00E6DA58 /* DistributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */; };
+		12905DBF1DA6C0D700B27F38 /* RevealCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12905DBE1DA6C0D600B27F38 /* RevealCollectionViewController.swift */; };
+		12905DC21DA6D71200B27F38 /* RevealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12905DC11DA6D71100B27F38 /* RevealCollectionViewCell.swift */; };
 		12DB5DC11D762D2F00771C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DC01D762D2F00771C34 /* AppDelegate.swift */; };
 		12DB5DC31D762D2F00771C34 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB5DC21D762D2F00771C34 /* MainController.swift */; };
 		12DB5DC61D762D3000771C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DB5DC41D762D3000771C34 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributionViewController.swift; sourceTree = "<group>"; };
+		12905DBE1DA6C0D600B27F38 /* RevealCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealCollectionViewController.swift; sourceTree = "<group>"; };
+		12905DC11DA6D71100B27F38 /* RevealCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealCollectionViewCell.swift; sourceTree = "<group>"; };
 		12DB5DBD1D762D2F00771C34 /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DB5DC01D762D2F00771C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12DB5DC21D762D2F00771C34 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12905DC01DA6C0F400B27F38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12DB5DC21D762D2F00771C34 /* MainController.swift */,
+				12DB5DD81D76E51500771C34 /* CountTableViewController.swift */,
+				1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */,
+				12905DBE1DA6C0D600B27F38 /* RevealCollectionViewController.swift */,
+				12E0AF3B1D7CF385004560EA /* MasterViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		12DB5DB41D762D2F00771C34 = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +98,9 @@
 			children = (
 				12E0AF411D7E0FE7004560EA /* Cell */,
 				12E0AED51D7CD933004560EA /* Models */,
+				12905DC01DA6C0F400B27F38 /* Controllers */,
 				12E0AF101D7CDD4A004560EA /* DataManager.swift */,
 				12DB5DC01D762D2F00771C34 /* AppDelegate.swift */,
-				12DB5DC21D762D2F00771C34 /* MainController.swift */,
-				12DB5DD81D76E51500771C34 /* CountTableViewController.swift */,
-				1213657E1D783B4A00E6DA58 /* DistributionViewController.swift */,
-				12E0AF3B1D7CF385004560EA /* MasterViewController.swift */,
 				12DB5DC41D762D3000771C34 /* Main.storyboard */,
 				12DB5DCA1D762D3000771C34 /* Assets.xcassets */,
 				12DB5DCC1D762D3000771C34 /* LaunchScreen.storyboard */,
@@ -110,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				12DB5DDA1D76EED000771C34 /* CountTableCell.swift */,
+				12905DC11DA6D71100B27F38 /* RevealCollectionViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -257,11 +271,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				12E0AF401D7D933F004560EA /* Map.swift in Sources */,
+				12905DBF1DA6C0D700B27F38 /* RevealCollectionViewController.swift in Sources */,
 				12E0AF3C1D7CF385004560EA /* MasterViewController.swift in Sources */,
 				12DB5DC31D762D2F00771C34 /* MainController.swift in Sources */,
 				12DB5DD91D76E51500771C34 /* CountTableViewController.swift in Sources */,
 				1213657F1D783B4A00E6DA58 /* DistributionViewController.swift in Sources */,
 				12DB5DC11D762D2F00771C34 /* AppDelegate.swift in Sources */,
+				12905DC21DA6D71200B27F38 /* RevealCollectionViewCell.swift in Sources */,
 				12E0AF3F1D7D933F004560EA /* Map+CoreDataProperties.swift in Sources */,
 				12DB5DC91D762D3000771C34 /* Mafia.xcdatamodeld in Sources */,
 				12E0AF111D7CDD4A004560EA /* DataManager.swift in Sources */,

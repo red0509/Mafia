@@ -10,30 +10,58 @@ import UIKit
 
 class DistributionViewController: UIViewController {
     
-    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var buttonDistrib: UIButton!
     @IBOutlet weak var imageMap: UIImageView!
     
-    
     var arrayPlayers = [Int]()
     var arrayPlayersTwo = [Int]()
+    var arrayPlayersName = [String]()
+    var arrayPlayersMap = [String]()
     
+    var number : Int = 1
     var hideMap = true
+    var countMap : Int {
+        return 7
+    }
+    
+    enum PersonName : String {
+        case citizen = "Мирный житель"
+        case commissar = "Комиссар"
+        case mafia = "Мафия"
+        case donMafia = "Дон мафии"
+        case doctor = "Доктор"
+        case prostitute = "Любовница"
+        case maniac = "Маньяк"
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Раздача карт"
+        title = "Раздача карт"
+        
+        buttonDistrib.layer.cornerRadius = 9
+        
         arrayPlayersTwo = arrayPlayers
         label.text = ""
-        imageMap.image = UIImage.init(named: "back.png")
+        imageMap.image  = UIImage(named: "back.png")
+        
+        //        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showReveal"{
+            
+            let controller = segue.destination as! RevealCollectionViewController
+            controller.arrayPlayersName = self.arrayPlayersName
+           controller.arrayPlayersMap = self.arrayPlayersMap
+        }
     }
+    
     
     func animationImageMap(_ nameImage : String, textLabel : String){
         
@@ -49,7 +77,7 @@ class DistributionViewController: UIViewController {
                 self.label.alpha = 1
                 self.imageMap.alpha = 1
             })
-            self.imageMap.image = UIImage.init(named: nameImage)
+            self.imageMap.image = UIImage(named: nameImage)
             self.label.text = textLabel
             
         }
@@ -66,42 +94,45 @@ class DistributionViewController: UIViewController {
         if hideMap {
             
             while arrayPlayers != emptyArray {
-                let index = Int(arc4random_uniform(7))
+                let index = Int(arc4random_uniform(UInt32(countMap)))
                 let random = arrayPlayers[index]
                 if random == 0 {
                     continue
                 }else{
-                    
-                    if index == 0{
-                        
-                        animationImageMap("citizen.png", textLabel: "Мирный житель")
-
-                    }else if index == 1{
-
-                        animationImageMap("commissar.png", textLabel: "Комиссар")
-                        
-                    }else if index == 2{
-
-                        animationImageMap("mafia.png", textLabel: "Мафия")
-                        
-                    }else if index == 3{
-                        
-                        animationImageMap("donmafia.png", textLabel: "Дон мафии")
-                        
-                    }else if index == 4{
-                        
-                        animationImageMap("doctor.png", textLabel: "Доктор")
-                        
-                    }else if index == 5{
-                        
-                        animationImageMap("prostitute.png", textLabel: "Любовница")
-                        
-                    }else if index == 6{
-                        
-                        animationImageMap("maniac.png", textLabel: "Маньяк")
+                    switch index {
+                    case 0:
+                        animationImageMap("citizen.png", textLabel: "Игрок №\(number)\n\(PersonName.citizen.rawValue)")
+                        self.arrayPlayersName.append(PersonName.citizen.rawValue)
+                        self.arrayPlayersMap.append("citizen.png")
+                    case 1:
+                        animationImageMap("commissar.png", textLabel: "Игрок №\(number)\n\(PersonName.commissar.rawValue)")
+                        self.arrayPlayersName.append(PersonName.commissar.rawValue)
+                        self.arrayPlayersMap.append("commissar.png")
+                    case 2:
+                        animationImageMap("mafia.png", textLabel: "Игрок №\(number)\n\(PersonName.mafia.rawValue)")
+                        self.arrayPlayersName.append(PersonName.mafia.rawValue)
+                        self.arrayPlayersMap.append("mafia.png")
+                    case 3:
+                        animationImageMap("donmafia.png", textLabel: "Игрок №\(number)\n\(PersonName.donMafia.rawValue)")
+                        self.arrayPlayersName.append(PersonName.donMafia.rawValue)
+                        self.arrayPlayersMap.append("donmafia.png")
+                    case 4:
+                        animationImageMap("doctor.png", textLabel: "Игрок №\(number)\n\(PersonName.doctor.rawValue)")
+                        self.arrayPlayersName.append(PersonName.doctor.rawValue)
+                        self.arrayPlayersMap.append("doctor.png")
+                    case 5:
+                        animationImageMap("prostitute.png", textLabel: "Игрок №\(number)\n\(PersonName.prostitute.rawValue)")
+                        self.arrayPlayersName.append(PersonName.prostitute.rawValue)
+                        self.arrayPlayersMap.append("prostitute.png")
+                    case 6:
+                        animationImageMap("maniac.png", textLabel: "Игрок №\(number)\n\(PersonName.maniac.rawValue)")
+                        self.arrayPlayersName.append(PersonName.maniac.rawValue)
+                        self.arrayPlayersMap.append("maniac.png")
+                    default: break
                     }
+                    
+                    number += 1
                     arrayPlayers[index] -= 1
-                    print(arrayPlayers)
                     break
                 }
             }
@@ -116,15 +147,21 @@ class DistributionViewController: UIViewController {
                 let alert = UIAlertController(title: nil, message:  "Колода раздана", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Перераспределить колоду", style: .default , handler: { (alert : UIAlertAction) in
-//                    self.navigationController?.popViewController(animated: true)
                     let _ = self.navigationController?.popViewController(animated: true)
                 }))
                 
-                alert.addAction(UIAlertAction(title: "Заново", style: .cancel, handler: { (alert : UIAlertAction) in
+                alert.addAction(UIAlertAction(title: "Заново", style: .default, handler: { (alert : UIAlertAction) in
+                    print(self.arrayPlayersName)
+                    self.arrayPlayersName = []
+                    self.number = 1
                     self.buttonDistrib.setTitle( "Начать раздачу", for: UIControlState())
                     self.arrayPlayers = self.arrayPlayersTwo
                     self.hideMap = true
                     
+                }))
+                
+                alert.addAction(UIAlertAction(title: "Начать игру", style: .cancel, handler: { (alert : UIAlertAction) in
+                        self.performSegue(withIdentifier: "showReveal", sender: nil)
                 }))
                 
                 self.present(alert, animated: true, completion: nil)

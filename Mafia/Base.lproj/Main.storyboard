@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -103,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="820" y="1067"/>
         </scene>
-        <!--Count Table View Controller-->
+        <!--Title-->
         <scene sceneID="yUo-h1-8RS">
             <objects>
                 <tableViewController storyboardIdentifier="CountTableViewController" id="nGD-g7-Cq3" customClass="CountTableViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,6 +131,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="uXX-IR-OiY">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="stepperAction:" destination="nGD-g7-Cq3" eventType="valueChanged" id="U9n-df-hKM"/>
                                             </connections>
@@ -162,6 +164,20 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="luR-M2-F73">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Готово" id="Wgu-Pb-1OX">
+                                <connections>
+                                    <segue destination="dAc-iw-ER7" kind="show" identifier="showDistribution" id="stb-Sm-oA1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="kxl-Ab-BPn">
+                                <connections>
+                                    <action selector="insertNewObjectAction:" destination="nGD-g7-Cq3" id="oPo-zC-jHG"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1M-c9-Ow6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,16 +197,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxd-21-2Qr">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Начать раздачу">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="ActionDistrib:" destination="dAc-iw-ER7" eventType="touchUpInside" id="B90-PD-oRP"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Rs-ux-gv6"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0Mc-ak-eJt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="0Mc-ak-eJt">
+                                <string key="text">Игрок №1 
+Мирный житель</string>
                                 <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="29"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -198,11 +217,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cQv-DR-Y1W" firstAttribute="top" secondItem="jxd-21-2Qr" secondAttribute="bottom" constant="20" id="1CU-Sf-gt2"/>
+                            <constraint firstItem="cQv-DR-Y1W" firstAttribute="top" secondItem="jxd-21-2Qr" secondAttribute="bottom" constant="8" id="1CU-Sf-gt2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Rs-ux-gv6" secondAttribute="trailing" constant="4" id="6Kk-tl-pQX"/>
                             <constraint firstItem="4Rs-ux-gv6" firstAttribute="top" secondItem="hDZ-nI-SaA" secondAttribute="bottom" constant="8" id="8d9-m0-Tip"/>
                             <constraint firstItem="jxd-21-2Qr" firstAttribute="leading" secondItem="L8p-nx-uvV" secondAttribute="leadingMargin" constant="4" id="JGc-b2-24W"/>
-                            <constraint firstItem="cQv-DR-Y1W" firstAttribute="top" secondItem="4Rs-ux-gv6" secondAttribute="bottom" constant="112.5" id="cvQ-n0-HE9"/>
+                            <constraint firstItem="cQv-DR-Y1W" firstAttribute="top" secondItem="4Rs-ux-gv6" secondAttribute="bottom" constant="136" id="cvQ-n0-HE9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jxd-21-2Qr" secondAttribute="trailing" constant="4" id="l4w-5j-DaN"/>
                             <constraint firstItem="4Rs-ux-gv6" firstAttribute="leading" secondItem="L8p-nx-uvV" secondAttribute="leadingMargin" constant="4" id="n4e-A1-poN"/>
                             <constraint firstItem="0Mc-ak-eJt" firstAttribute="leading" secondItem="L8p-nx-uvV" secondAttribute="leadingMargin" constant="4" id="tbm-To-sn6"/>
@@ -211,15 +230,64 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonDistrib" destination="jxd-21-2Qr" id="znI-ow-UQ5"/>
                         <outlet property="imageMap" destination="4Rs-ux-gv6" id="kan-b1-weZ"/>
                         <outlet property="label" destination="0Mc-ak-eJt" id="qCw-xK-9GW"/>
+                        <segue destination="8hI-6T-fab" kind="show" identifier="showReveal" id="SPL-iJ-Oj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkq-wf-ZLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398" y="298"/>
+            <point key="canvasLocation" x="2397.5999999999999" y="297.30134932533736"/>
+        </scene>
+        <!--Reveal Collection View Controller-->
+        <scene sceneID="gfz-L9-OoT">
+            <objects>
+                <collectionViewController id="8hI-6T-fab" customClass="RevealCollectionViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SwG-HR-TiX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cck-Ok-ee1">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellReveal" id="rVW-04-Wxe" customClass="RevealCollectionViewCell" customModule="Mafia" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrD-Xo-DvE">
+                                            <frame key="frameInset" minX="8" minY="8" width="84" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.0" green="0.78431372549019607" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="numberPlayersLabel" destination="KrD-Xo-DvE" id="Xc4-a6-e50"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8hI-6T-fab" id="VQ9-fK-aAP"/>
+                            <outlet property="delegate" destination="8hI-6T-fab" id="4LI-6D-Oc8"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUD-md-pbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3245.5999999999999" y="297.30134932533736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kL8-9X-AEd">
